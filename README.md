@@ -48,7 +48,7 @@ curl \
 ```
 
 ### Generate audio
-Generate audio for text (required), language (required), dialect (required), voice (required) and voiceStyle (optional)
+Generate audio for given text (required), language (required), dialect (required), voice (required) and voiceStyle (optional)
 ```bash
 curl \
   -H "Authentication: Bearer <API KEY>" \
