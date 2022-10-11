@@ -56,6 +56,7 @@ curl \
   -d '{"text": "<TEXT>" "languageId": "<LANUGAGE ID>", "dialectId": "<DIALECT ID>", "voiceId": "<VOICE ID>", "voiceStyleId": "<VOICE STYLE ID>"}' \
   -X POST https://api.fliki.ai/v1/generate/audio
 ```
+For `text` you can supply plain text or SSML.
 
 ### Usage
 Get usage for current billing period
