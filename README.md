@@ -11,7 +11,7 @@ Your users can generate audio and video content with our AI-powered Fliki API. T
 | 21600 (6 hrs) | ∞ | $0.0025 per credit |
 
 Note:
-- Your card will be billed for usage worth of every $30.
+- Your card will be billed for usage worth of every $50.
 - A one time payment of $9 will be charged upon API activation (to prevent abuse and validate your card).
 
 ## API key
