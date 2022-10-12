@@ -13,7 +13,7 @@ Your users can generate audio and video content with our AI-powered Fliki API. T
 Note: Your card will be billed for usage worth of every $50.
 
 ## API key
-Head over to [Accounts → API](https://app.fliki.ai/account/api-access) section and get the API key.
+Head over to [Accounts → API](https://app.fliki.ai/account/api) section and get the API key.
 
 ## API endpoints
 
