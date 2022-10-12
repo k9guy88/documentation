@@ -2,7 +2,7 @@
 const axios = require('axios')
 
 // API key
-const API_KEY = '<YOUR_API_KEY>' // (Get your API key here: https://app.fliki.ai/account/api)
+const API_KEY = '<YOUR_API_KEY>' // Get your API key here: https://app.fliki.ai/account/api
 
 // API URL
 const API_URL = 'https://api.fliki.ai/v1'
@@ -98,7 +98,7 @@ async function generateAudio({ content, voiceId, voiceStyleId = null }) {
 
 ;(async () => {
   // Get languages
-  if (false) {
+  if (true) {
     const languages = await languageList()
     console.log('languages', languages)
   }
