@@ -46,12 +46,12 @@ curl \
 ```
 
 ### Generate audio
-Generate audio for given text (required, plain text or SSML), voice (required) and voiceStyle (optional)
+Generate audio for given content (plain text or SSML, required), voice (required) and voiceStyle (optional)
 ```bash
 curl \
   -H "Authentication: Bearer <API KEY>" \
   -H "Content-Type: application/json" \
-  -d '{"text": "<TEXT>", "voiceId": "<VOICE ID>", "voiceStyleId": "<VOICE STYLE ID>"}' \
+  -d '{"content": "<CONTENT>", "voiceId": "<VOICE ID>", "voiceStyleId": "<VOICE STYLE ID>"}' \
   -X POST https://api.fliki.ai/v1/generate/audio
 ```
 
