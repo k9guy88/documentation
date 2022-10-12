@@ -48,15 +48,14 @@ curl \
 ```
 
 ### Generate audio
-Generate audio for given text (required), language (required), dialect (required), voice (required) and voiceStyle (optional)
+Generate audio for given text (required, plain text or SSML), voice (required) and voiceStyle (optional)
 ```bash
 curl \
   -H "Authentication: Bearer <API KEY>" \
   -H "Content-Type: application/json" \
-  -d '{"text": "<TEXT>" "languageId": "<LANUGAGE ID>", "dialectId": "<DIALECT ID>", "voiceId": "<VOICE ID>", "voiceStyleId": "<VOICE STYLE ID>"}' \
+  -d '{"text": "<TEXT>", "voiceId": "<VOICE ID>", "voiceStyleId": "<VOICE STYLE ID>"}' \
   -X POST https://api.fliki.ai/v1/generate/audio
 ```
-For `text` you can supply plain text or SSML.
 
 ### Usage
 Get usage for current billing period
