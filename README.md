@@ -54,7 +54,7 @@ curl \
   -d '{"content": "<CONTENT>", "voiceId": "<VOICE ID>", "voiceStyleId": "<VOICE STYLE ID>"}' \
   -X POST https://api.fliki.ai/v1/generate/audio
 ```
-Note: The file generated are hosted in our storage servers temporarily and is deleted automatically after one month. We expect you to copy it to your own storage server for long term availability.
+Note: The file generated are hosted on Fliki's storage server and is deleted automatically after one month. We expect you to copy it to your own storage server for long term availability.
 
 ### Usage
 Get usage for current billing period
