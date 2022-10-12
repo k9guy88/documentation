@@ -112,8 +112,8 @@ async function generateAudio({ content, voiceId, voiceStyleId = null }) {
   // Get voices
   if (false) {
     const voices = await voiceList({
-      languageId: '', // English
-      dialectId: '', // United States
+      languageId: '61b8b2f54268666c126babc9', // English
+      dialectId: '61b8b31c4268666c126bace7', // United States
     })
     console.log('voices', voices)
   }
@@ -122,7 +122,7 @@ async function generateAudio({ content, voiceId, voiceStyleId = null }) {
   if (false) {
     const audio = await generateAudio({
       content: 'Hello, thank you for giving Fliki API a try!',
-      voiceId: '', // English, United States, Sara
+      voiceId: '61b8b45a4268666c126bb32b', // English, United States, Sara
     })
 
     console.log('audio', audio)
