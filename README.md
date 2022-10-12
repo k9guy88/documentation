@@ -8,7 +8,7 @@ Your users can generate audio and video content with our AI-powered Fliki API. T
 | 0 | 600 (10 min) | $0 |
 | 600 (10 min) | 10800 (3 hrs) | $0.0035 |
 | 10800 (3 hrs) | 21600 (6 hrs) | $0.003 |
-| 21600 (6 hrs) | ∞ | $0.0025 per credit |
+| 21600 (6 hrs) | ∞ | $0.0025 |
 
 Note: Your card will be billed for usage worth of every $50.
 
