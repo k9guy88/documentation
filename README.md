@@ -56,6 +56,8 @@ curl \
 ```
 Note: The file generated are hosted on Fliki's storage server and is deleted automatically after one month. We expect you to copy it to your own storage server for long term availability.
 
+Input data field `content` is limited to 2000 characters.
+
 ### Generate video
 > Coming soon. Reach out on support@fliki.ai to register for early access.
 
