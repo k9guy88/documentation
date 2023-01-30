@@ -1,19 +1,12 @@
 # API documentation
-Your users can generate audio and video content with our AI-powered Fliki API. They can generate content in 75+ languages, 800+ voices and 100+ dialects!
+Your users can generate audio and video content with our AI-powered Fliki API. They can generate content in 75+ languages, 900+ voices and 100+ dialects!
 
 ## Pricing
-
-| From | To | Total duration | Price per credit |
-| --- | --- | --- | --- |
-| 0 | 600 | 10 min | $0 |
-| 600 | 10800 | 3 hours | $0.0035 |
-| 10800 | 21600 | 6 hours | $0.003 |
-| 21600 | ∞ | ∞ | $0.0025 |
-
-Note: Your card will be billed for usage worth of every $50.
+API is bundled with the [premium plan](https://fliki.ai/pricing).
 
 ## API key
-Head over to [Accounts → API](https://app.fliki.ai/account/api) section and get the API key.
+- Subscribe to premium plan [Accounts → Credits](https://app.fliki.ai/account)
+- Head over to [Accounts → API](https://app.fliki.ai/account/api) section and get the API key.
 
 ## API endpoints
 
@@ -59,13 +52,4 @@ Note: The file generated are hosted on Fliki's storage server and is deleted aut
 Input data field `content` is limited to 2000 characters.
 
 ### Generate video
-> Coming soon. Reach out on support@fliki.ai to register for early access.
-
-### Usage
-Get usage for current billing period
-```bash
-curl \
-  -H "Authentication: Bearer <API KEY>" \
-  -H "Content-Type: application/json" \
-  -X GET https://api.fliki.ai/v1/usage
-```
+> Coming soon. Please fill out [this form](https://tally.so/r/nGegWe) to get early access to the video API.
