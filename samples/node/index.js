@@ -96,26 +96,6 @@ async function generateAudio({ content, voiceId, voiceStyleId = null }) {
   return null
 }
 
-// Usage
-async function usage() {
-  try {
-    const { data } = await axios({
-      method: 'get',
-      url: `${API_URL}/usage`,
-      headers: {
-        Authentication: `Bearer ${API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-    })
-
-    return data ? data.data : null
-  } catch (error) {
-    console.log(error)
-  }
-
-  return null
-}
-
 ;(async () => {
   // Get languages
   if (true) {
@@ -146,12 +126,5 @@ async function usage() {
     })
 
     console.log('audio', audio)
-  }
-
-  // Get usage
-  if (false) {
-    const data = await usage()
-
-    console.log('data', data)
   }
 })()
