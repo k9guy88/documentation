@@ -9,7 +9,7 @@ API is bundled with the [premium plan](https://fliki.ai/pricing).
 - Head over to [Accounts → API](https://app.fliki.ai/account/api) section and get the API key.
 
 ## Samples
-- [NodeJS](samples/node/index.js)
+- [NodeJS](samples/node)
 
 ## API endpoints
 
