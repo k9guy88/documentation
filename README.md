@@ -53,3 +53,7 @@ Input data field `content` is limited to 2000 characters.
 
 ### Generate video
 > Coming soon. Please fill out [this form](https://tally.so/r/nGegWe) to get early access to the video API.
+
+
+## Note
+The API service is in early access only. The endpoints and other workings of API is subjected to change without notice.
