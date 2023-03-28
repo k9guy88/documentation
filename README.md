@@ -8,6 +8,9 @@ API is bundled with the [premium plan](https://fliki.ai/pricing).
 - Subscribe to premium plan [Accounts → Credits](https://app.fliki.ai/account)
 - Head over to [Accounts → API](https://app.fliki.ai/account/api) section and get the API key.
 
+## Samples
+- [NodeJS](samples/node/index.js)
+
 ## API endpoints
 
 ### Language list
