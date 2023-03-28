@@ -7,86 +7,21 @@ const API_KEY = '<YOUR_API_KEY>' // Get your API key here: https://app.fliki.ai/
 // API URL
 const API_URL = 'https://api.fliki.ai/v1'
 
-// Language list
-async function languageList() {
+// call api
+async function api({ method, endpoint, params = null }) {
   try {
-    const { data } = await axios({
-      method: 'get',
-      url: `${API_URL}/languages`,
+    const request = {
+      method,
+      url: `${API_URL}${endpoint}`,
       headers: {
         Authentication: `Bearer ${API_KEY}`,
         'Content-Type': 'application/json',
       },
-    })
-
-    return data ? data.data : null
-  } catch (error) {
-    console.log(error)
-  }
-
-  return null
-}
-
-// Dialect list
-async function dialectList() {
-  try {
-    const { data } = await axios({
-      method: 'get',
-      url: `${API_URL}/dialects`,
-      headers: {
-        Authentication: `Bearer ${API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-    })
-
-    return data ? data.data : null
-  } catch (error) {
-    console.log(error)
-  }
-
-  return null
-}
-
-// Voice list
-async function voiceList({ languageId, dialectId }) {
-  try {
-    const { data } = await axios({
-      method: 'post',
-      url: `${API_URL}/voices`,
-      headers: {
-        Authentication: `Bearer ${API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      data: {
-        languageId,
-        dialectId,
-      },
-    })
-
-    return data ? data.data : null
-  } catch (error) {
-    console.log(error)
-  }
-
-  return null
-}
-
-// Generate audio
-async function generateAudio({ content, voiceId, voiceStyleId = null }) {
-  try {
-    const { data } = await axios({
-      method: 'post',
-      url: `${API_URL}/generate/audio`,
-      headers: {
-        Authentication: `Bearer ${API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      data: {
-        content,
-        voiceId,
-        voiceStyleId,
-      },
-    })
+    }
+    if (params) {
+      request.data = params
+    }
+    const { data } = await axios(request)
 
     return data ? data.data : null
   } catch (error) {
@@ -98,33 +33,140 @@ async function generateAudio({ content, voiceId, voiceStyleId = null }) {
 
 ;(async () => {
   // Get languages
-  if (true) {
-    const languages = await languageList()
+  if (false) {
+    const languages = await api({
+      method: 'get',
+      endpoint: '/languages',
+    })
     console.log('languages', languages)
   }
 
   // Get dialects
   if (false) {
-    const dialects = await dialectList()
+    const dialects = await api({
+      method: 'get',
+      endpoint: '/dialects',
+    })
     console.log('dialects', dialects)
   }
 
   // Get voices
   if (false) {
-    const voices = await voiceList({
-      languageId: '61b8b2f54268666c126babc9', // English
-      dialectId: '61b8b31c4268666c126bace7', // United States
+    const voices = await api({
+      method: 'post',
+      endpoint: '/voices',
+      params: {
+        languageId: '61b8b2f54268666c126babc9', // English
+        dialectId: '61b8b31c4268666c126bace7', // United States
+      },
     })
     console.log('voices', voices)
   }
 
-  // Generate audio
+  // Generate
   if (false) {
-    const audio = await generateAudio({
-      content: 'Hello, thank you for giving Fliki API a try!',
-      voiceId: '61b8b45a4268666c126bb32b', // English, United States, Sara
+    const voiceId = '61b8b45a4268666c126bb32b' // English, United States, Sara
+
+    const generate = await api({
+      method: 'post',
+      endpoint: '/generate',
+      params: {
+        format: 'video',
+
+        scenes: [
+          {
+            content:
+              'Eating at regular times during the day helps burn calories at a faster rate and reduces the temptation to snack on foods high in fat and sugar.',
+            voiceId,
+          },
+          {
+            content:
+              'Fruit and vegetables are low in calories and fat and they also contain plenty of vitamins and minerals.',
+            voiceId,
+          },
+        ],
+
+        settings: {
+          aspectRatio: 'portrait',
+          subtitle: {
+            fontColor: 'yellow',
+            backgroundColor: 'black',
+            placement: 'bottom',
+          },
+        },
+      },
+    })
+
+    console.log('generate', generate)
+  }
+
+  // Generate status
+  if (false) {
+    const checkStatus = async (id) => {
+      const status = await api({
+        method: 'post',
+        endpoint: '/generate/status',
+        params: { id },
+      })
+
+      console.log('status', status)
+
+      if (status && status.status === 'processing') {
+        await sleep(5)
+
+        return await checkStatus(id)
+      }
+
+      return status
+    }
+
+    const sleep = (seconds) => {
+      return new Promise((resolve) => setTimeout(resolve, seconds * 1000))
+    }
+
+    const id = '6423106bae70c038c21c08cb'
+    await checkStatus(id)
+  }
+
+  // Generate text-to-speech
+  if (false) {
+    const audio = await api({
+      method: 'post',
+      endpoint: `/generate/text-to-speech`,
+      params: {
+        content: 'Hello, thank you for giving Fliki API a try!',
+        voiceId: '61b8b45a4268666c126bb32b', // English, United States, Sara
+      },
     })
 
     console.log('audio', audio)
+  }
+
+  // Generate text-to-image
+  if (false) {
+    const image = await api({
+      method: 'post',
+      endpoint: `/generate/text-to-image`,
+      params: {
+        content:
+          'A close up, studio photographic portrait of a white siamese cat that looks curious',
+      },
+    })
+
+    console.log('image', image)
+  }
+
+  // Generate tweet-to-video
+  if (false) {
+    const generate = await api({
+      method: 'post',
+      endpoint: `/generate/tweet-to-video`,
+      params: {
+        url: 'https://twitter.com/naval/status/1594042684456386561',
+        voiceId: '61b8b45a4268666c126bb32b', // English, United States, Sara
+      },
+    })
+
+    console.log('generate', generate)
   }
 })()
