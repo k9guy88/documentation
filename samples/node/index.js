@@ -126,7 +126,7 @@ async function api({ method, endpoint, params = null }) {
       return new Promise((resolve) => setTimeout(resolve, seconds * 1000))
     }
 
-    const id = ''
+    const id = '<ID>'
     await checkStatus(id)
   }
 

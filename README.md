@@ -8,6 +8,9 @@ API is bundled with the [premium plan](https://fliki.ai/pricing).
 - Subscribe to premium plan [Accounts → Credits](https://app.fliki.ai/account)
 - Head over to [Accounts → API](https://app.fliki.ai/account/api) section and get the API key.
 
+## Samples
+- [NodeJS](samples/node)
+
 ## API endpoints
 
 ### Language list
@@ -27,6 +30,7 @@ curl \
   -H "Content-Type: application/json" \
   -X GET https://api.fliki.ai/v1/dialects
 ```
+Returns list of dialects.
 
 ### Voice list
 Get list of voices (along with supported voice styles) by language (required) and dialect (required)
@@ -37,6 +41,7 @@ curl \
   -d '{"languageId": "<LANUGAGE ID>", "dialectId": "<DIALECT ID>"}' \
   -X POST https://api.fliki.ai/v1/voices
 ```
+Returns list of voices.
 
 ### Generate video / voiceover
 Generate video or voiceover for given scenes
@@ -47,6 +52,7 @@ curl \
   -d '{"format": "video", "scenes": [{"content": "<CONTENT 1>", "voiceId": "<VOICE ID>"}, {"content": "<CONTENT 2>", "voiceId": "<VOICE ID>"}]}' \
   -X POST https://api.fliki.ai/v1/generate
 ```
+Returns ID which you can pass to [Generate status](#generate-status) to check status and receive download URL.
 
 ### Generate status
 Check status for generate requests and download generated file
@@ -57,6 +63,7 @@ curl \
   -d '{"id": "<ID>"}' \
   -X POST https://api.fliki.ai/v1/generate/status
 ```
+Returns status and download URL.
 
 ### Generate text-to-speech
 Generate audio for given content (plain text or SSML, required), voice (required) and voiceStyle (optional)
@@ -67,6 +74,7 @@ curl \
   -d '{"content": "<CONTENT>", "voiceId": "<VOICE ID>", "voiceStyleId": "<VOICE STYLE ID>"}' \
   -X POST https://api.fliki.ai/v1/generate/audio
 ```
+Returns download URL.
 
 ### Generate text-to-image
 Generate image using AI for given content (plain text, required)
@@ -77,6 +85,7 @@ curl \
   -d '{"content": "<CONTENT>"}' \
   -X POST https://api.fliki.ai/v1/generate/text-to-image
 ```
+Returns download URL.
 
 ### Generate tweet-to-video
 Turn Tweet into video
@@ -87,6 +96,7 @@ curl \
   -d '{"url": "<Tweet URL>", "voiceId": "<VOICE ID>"}' \
   -X POST https://api.fliki.ai/v1/generate/tweet-to-video
 ```
+Returns ID which you can pass to [Generate status](#generate-status) to check status and receive download URL.
 
 ## Note
 - Input data field `content` across all applicable endpoint is limited to 1000 characters.
