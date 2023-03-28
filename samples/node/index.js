@@ -33,7 +33,7 @@ async function api({ method, endpoint, params = null }) {
 
 ;(async () => {
   // Get languages
-  if (false) {
+  if (true) {
     const languages = await api({
       method: 'get',
       endpoint: '/languages',
@@ -98,6 +98,8 @@ async function api({ method, endpoint, params = null }) {
     })
 
     console.log('generate', generate)
+
+    // next step: use checkStatus(generate.id) for the download link
   }
 
   // Generate status
@@ -168,5 +170,7 @@ async function api({ method, endpoint, params = null }) {
     })
 
     console.log('generate', generate)
+
+    // next step: use checkStatus(generate.id) for the download link
   }
 })()
