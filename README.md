@@ -120,4 +120,4 @@ Returns ID which you can pass to [Generate status](#generate-status) to check st
 
 
 ## Contact
-Share your feedback/bug reports via email [support@fliki.ai](mailto:support@fliki.ai) or via live chat available on [fliki.ai](https://fliki.ai).
+Share your feedback, feature requests and bug reports via email [support@fliki.ai](mailto:support@fliki.ai) or via live chat available on [fliki.ai](https://fliki.ai).
