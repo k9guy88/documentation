@@ -64,7 +64,7 @@ settings =
  subtitle: {
    fontColor: 'yellow',
    backgroundColor: 'black',
-   placement: 'top' | 'middle' | 'bottom',
+   placement: 'top' | 'center' | 'bottom',
  }
 }
 ```
