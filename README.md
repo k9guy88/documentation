@@ -87,7 +87,7 @@ curl \
   -H "Authentication: Bearer <API KEY>" \
   -H "Content-Type: application/json" \
   -d '{"content": "<CONTENT>", "voiceId": "<VOICE ID>", "voiceStyleId": "<VOICE STYLE ID>"}' \
-  -X POST https://api.fliki.ai/v1/generate/audio
+  -X POST https://api.fliki.ai/v1/generate/text-to-speech
 ```
 Returns download URL.
 
