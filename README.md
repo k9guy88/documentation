@@ -117,3 +117,7 @@ Returns ID which you can pass to [Generate status](#generate-status) to check st
 - Input data field `content` across all applicable endpoint is limited to 1000 characters.
 - The file generated are hosted on Fliki's storage server and is deleted automatically after one month. We expect you to copy it to your own storage server for long term availability.
 - The API service is in early access only. The endpoints and other workings of API is subjected to change without notice.
+
+
+## Contact
+Share your feedback/bug reports via email [support@fliki.ai](mailto:support@fliki.ai) or via live chat available on [fliki.ai](https://fliki.ai).
