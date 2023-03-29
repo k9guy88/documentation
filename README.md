@@ -54,6 +54,8 @@ curl \
 ```
 Returns ID which you can pass to [Generate status](#generate-status) to check status and receive download URL.
 
+format = `video` | `audio`
+
 ### Generate status
 Check status for generate requests and download generated file
 ```bash
