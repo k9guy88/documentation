@@ -49,12 +49,25 @@ Generate video or voiceover for given scenes
 curl \
   -H "Authentication: Bearer <API KEY>" \
   -H "Content-Type: application/json" \
-  -d '{"format": "video", "scenes": [{"content": "<CONTENT 1>", "voiceId": "<VOICE ID>"}, {"content": "<CONTENT 2>", "voiceId": "<VOICE ID>"}]}' \
+  -d '{"format": "video", "scenes": [{"content": "<CONTENT 1>", "voiceId": "<VOICE ID>"}, {"content": "<CONTENT 2>", "voiceId": "<VOICE ID>"}], "settings": {}}' \
   -X POST https://api.fliki.ai/v1/generate
 ```
 Returns ID which you can pass to [Generate status](#generate-status) to check status and receive download URL.
 
 format = `video` | `audio`
+
+settings = 
+
+```
+{
+ aspectRatio: 'portrait' | 'square' | 'horizontal',
+ subtitle: {
+   fontColor: 'yellow',
+   backgroundColor: 'black',
+   placement: 'top' | 'middle' | 'bottom',
+ }
+}
+```
 
 ### Generate status
 Check status for generate requests and download generated file
