@@ -49,7 +49,7 @@ Generate video or voiceover for given scenes
 curl \
   -H "Authentication: Bearer <API KEY>" \
   -H "Content-Type: application/json" \
-  -d '{"format": "video", "scenes": [{"content": "<CONTENT 1>", "voiceId": "<VOICE ID>"}, {"content": "<CONTENT 2>", "voiceId": "<VOICE ID>"}], "settings": {}}' \
+  -d '{"format": "video", "scenes": [{"content": "<CONTENT 1>", "voiceId": "<VOICE ID>"}, {"content": "<CONTENT 2>", "voiceId": "<VOICE ID>"}], "settings": {}, "backgroundMusicKeywords": "<KEYWORDS>"}' \
   -X POST https://api.fliki.ai/v1/generate
 ```
 Returns ID which you can pass to [Generate status](#generate-status) to check status and receive download URL.
@@ -65,9 +65,12 @@ settings =
    fontColor: 'yellow',
    backgroundColor: 'black',
    placement: 'top' | 'center' | 'bottom',
+   display: 'word', 'phrase' | 'sequence' | 'full',
  }
 }
 ```
+
+backgroundMusicKeywords (optional) = eg: 'happy, lofi, beats'
 
 ### Generate status
 Check status for generate requests and download generated file

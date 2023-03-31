@@ -92,8 +92,11 @@ async function api({ method, endpoint, params = null }) {
             fontColor: 'yellow',
             backgroundColor: 'black',
             placement: 'bottom',
+            display: 'phrase',
           },
         },
+
+        backgroundMusicKeywords: 'happy, lofi, beats',
       },
     })
 
