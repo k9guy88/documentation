@@ -14,7 +14,7 @@ async function api({ method, endpoint, params = null }) {
       method,
       url: `${API_URL}${endpoint}`,
       headers: {
-        Authentication: `Bearer ${API_KEY}`,
+        Authorization: `Bearer ${API_KEY}`,
         'Content-Type': 'application/json',
       },
     }
