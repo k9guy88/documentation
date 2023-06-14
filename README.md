@@ -59,15 +59,7 @@ format = `video` | `audio`
 settings = 
 
 ```
-{
- aspectRatio: 'portrait' | 'square' | 'horizontal',
- subtitle: {
-   fontColor: 'yellow',
-   backgroundColor: 'black',
-   placement: 'top' | 'center' | 'bottom',
-   display: 'word', 'phrase' | 'sequence' | 'full',
- }
-}
+{ aspectRatio: 'portrait' | 'square' | 'horizontal' }
 ```
 
 backgroundMusicKeywords (optional) = eg: 'happy, lofi, beats'
@@ -104,17 +96,6 @@ curl \
   -X POST https://api.fliki.ai/v1/generate/text-to-image
 ```
 Returns download URL.
-
-### Generate tweet-to-video
-Turn Tweet into video
-```bash
-curl \
-  -H "Authorization: Bearer <API KEY>" \
-  -H "Content-Type: application/json" \
-  -d '{"url": "<Tweet URL>", "voiceId": "<VOICE ID>"}' \
-  -X POST https://api.fliki.ai/v1/generate/tweet-to-video
-```
-Returns ID which you can pass to [Generate status](#generate-status) to check status and receive download URL.
 
 ## Note
 - Input data field `content` across all applicable endpoint is limited to 1000 characters.
