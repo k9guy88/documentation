@@ -1,5 +1,5 @@
 # API documentation
-Your users can generate audio and video content with our AI-powered Fliki API. They can generate content in 75+ languages, 900+ voices and 100+ dialects!
+Your users can generate audio and video content with our AI-powered Fliki API. They can generate content in 75+ languages, 1000+ voices and 100+ dialects!
 
 ## Pricing
 API is bundled with the [premium plan](https://fliki.ai/pricing).

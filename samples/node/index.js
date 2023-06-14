@@ -160,20 +160,4 @@ async function api({ method, endpoint, params = null }) {
 
     console.log('image', image)
   }
-
-  // Generate tweet-to-video
-  if (false) {
-    const generate = await api({
-      method: 'post',
-      endpoint: `/generate/tweet-to-video`,
-      params: {
-        url: 'https://twitter.com/naval/status/1594042684456386561',
-        voiceId: '61b8b45a4268666c126bb32b', // English, United States, Sara
-      },
-    })
-
-    console.log('generate', generate)
-
-    // next step: use checkStatus(generate.id) for the download link
-  }
 })()
