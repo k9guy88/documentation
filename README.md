@@ -1,5 +1,10 @@
+> 🪄 API v2 is launching soon with major updates to the API and capabilites. Stay tuned!
+
 # API documentation
 Your users can generate audio and video content with our AI-powered Fliki API. They can generate content in 75+ languages, 1000+ voices and 100+ dialects!
+
+## Version
+Fliki API v1
 
 ## Pricing
 API is bundled with the [premium plan](https://fliki.ai/pricing).
