@@ -92,15 +92,17 @@ curl \
 Returns download URL.
 
 ### Generate text-to-image
-Generate image using AI for given content (plain text, required)
+Generate image using AI for given `content` (plain text, required) and `style` (optional)
 ```bash
 curl \
   -H "Authorization: Bearer <API KEY>" \
   -H "Content-Type: application/json" \
-  -d '{"content": "<CONTENT>"}' \
+  -d '{"content": "<CONTENT>", "style": "<STYLE>"}' \
   -X POST https://api.fliki.ai/v1/generate/text-to-image
 ```
 Returns download URL.
+
+style = `3d-model` | `analog-film` | `anime` | `cinematic` | `comic-book` | `digital-art` | `enhance` | `fantasy-art` | `isometric` | `line-art` | `low-poly` | `modeling-compound` | `neon-punk` | `origami` | `photographic` | `pixel-art` | `tile-texture`
 
 ## Note
 - Input data field `content` across all applicable endpoint is limited to 1000 characters.
