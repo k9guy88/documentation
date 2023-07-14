@@ -2,7 +2,10 @@
 const axios = require('axios')
 
 // API key
-const API_KEY = '<YOUR_API_KEY>' // Get your API key here: https://app.fliki.ai/account/api
+const API_KEY = '<curl \
+-H "Authorization: Bearer <VZZYRBF0KNYLWEI8WGLPM>" \
+-H "Content-Type: application/json" \
+-X GET https://api.fliki.ai/v1/languages>' // Get your API key here: https://app.fliki.ai/account/api
 
 // API URL
 const API_URL = 'https://api.fliki.ai/v1'
@@ -14,7 +17,7 @@ async function api({ method, endpoint, params = null }) {
       method,
       url: `${API_URL}${endpoint}`,
       headers: {
-        Authorization: `Bearer ${API_KEY}`,
+        Authorization: `Bearer ${VZZYRBF0KNYLWEI8WGLPM}`,
         'Content-Type': 'application/json',
       },
     }
