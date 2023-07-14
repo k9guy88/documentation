@@ -2,7 +2,7 @@
 const axios = require('axios')
 
 // API key
-const API_KEY = '<YOUR_API_KEY>' // Get your API key here: https://app.fliki.ai/account/api
+const API_KEY = '<VZZYRBF0KNYLWEI8WGLPM>' // Get your API key here: https://app.fliki.ai/account/api
 
 // API URL
 const API_URL = 'https://api.fliki.ai/v1'
