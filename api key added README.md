@@ -22,7 +22,7 @@ API is bundled with the [premium plan](https://fliki.ai/pricing).
 Get list of languages
 ```bash
 curl \
-  -H "Authorization: Bearer <API KEY>" \
+  -H "Authorization: Bearer <VZZYRBF0KNYLWEI8WGLPM>" \
   -H "Content-Type: application/json" \
   -X GET https://api.fliki.ai/v1/languages
 ```
@@ -31,7 +31,7 @@ curl \
 Get list of dialects
 ```bash
 curl \
-  -H "Authorization: Bearer <API KEY>" \
+  -H "Authorization: Bearer <VZZYRBF0KNYLWEI8WGLPM>" \
   -H "Content-Type: application/json" \
   -X GET https://api.fliki.ai/v1/dialects
 ```
@@ -41,7 +41,7 @@ Returns list of dialects.
 Get list of voices (along with supported voice styles) by language (required) and dialect (required)
 ```bash
 curl \
-  -H "Authorization: Bearer <API KEY>" \
+  -H "Authorization: Bearer <VZZYRBF0KNYLWEI8WGLPM>" \
   -H "Content-Type: application/json" \
   -d '{"languageId": "<LANUGAGE ID>", "dialectId": "<DIALECT ID>"}' \
   -X POST https://api.fliki.ai/v1/voices
@@ -52,7 +52,7 @@ Returns list of voices.
 Generate video or voiceover for given scenes
 ```bash
 curl \
-  -H "Authorization: Bearer <API KEY>" \
+  -H "Authorization: Bearer <VZZYRBF0KNYLWEI8WGLPM>" \
   -H "Content-Type: application/json" \
   -d '{"format": "video", "scenes": [{"content": "<CONTENT 1>", "voiceId": "<VOICE ID>"}, {"content": "<CONTENT 2>", "voiceId": "<VOICE ID>"}], "settings": {}, "backgroundMusicKeywords": "<KEYWORDS>"}' \
   -X POST https://api.fliki.ai/v1/generate
@@ -73,7 +73,7 @@ backgroundMusicKeywords (optional) = eg: 'happy, lofi, beats'
 Check status for generate requests and download generated file
 ```bash
 curl \
-  -H "Authorization: Bearer <API KEY>" \
+  -H "Authorization: Bearer <VZZYRBF0KNYLWEI8WGLPMY>" \
   -H "Content-Type: application/json" \
   -d '{"id": "<ID>"}' \
   -X POST https://api.fliki.ai/v1/generate/status
@@ -84,7 +84,7 @@ Returns status and download URL.
 Generate audio for given content (plain text or SSML, required), voice (required) and voiceStyle (optional)
 ```bash
 curl \
-  -H "Authorization: Bearer <API KEY>" \
+  -H "Authorization: Bearer <VZZYRBF0KNYLWEI8WGLPM>" \
   -H "Content-Type: application/json" \
   -d '{"content": "<CONTENT>", "voiceId": "<VOICE ID>", "voiceStyleId": "<VOICE STYLE ID>"}' \
   -X POST https://api.fliki.ai/v1/generate/text-to-speech
@@ -95,7 +95,7 @@ Returns download URL.
 Generate image using AI for given `content` (plain text, required) and `style` (optional)
 ```bash
 curl \
-  -H "Authorization: Bearer <API KEY>" \
+  -H "Authorization: Bearer <VZZYRBF0KNYLWEI8WGLPM>" \
   -H "Content-Type: application/json" \
   -d '{"content": "<CONTENT>", "style": "<STYLE>"}' \
   -X POST https://api.fliki.ai/v1/generate/text-to-image
